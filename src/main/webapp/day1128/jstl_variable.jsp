@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<title>JSP 템플릿</title>
+<script src="http://192.168.10.88/jsp_prj/common/js/color-modes.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+	crossorigin="anonymous"></script>
+<meta name="theme-color" content="#712cf9">
+<link href="http://192.168.10.88/jsp_prj/common/css/carousel.css"
+	rel="stylesheet">
+<jsp:include page="../fragments/bootstrap_css.jsp"></jsp:include>
+<style type="text/css">
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+	});// ready
+</script>
+</head>
+<body>
+	<header data-bs-theme="dark">
+		<jsp:include page="../fragments/header.jsp" />
+	</header>
+	<main>
+
+		<!-- Marketing messaging and featurettes
+  ================================================== -->
+		<!-- Wrap the rest of the page in another container to center all the content. -->
+		<div class="container marketing">
+			<!-- START THE FEATURETTES -->
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7">
+					<c:set var="name" value="안세홍"></c:set>
+					<c:set var="age" value="20"></c:set>
+					<c:set var="motto" value="<strong>노력</strong>하면 된다!!"></c:set>
+					<c:out value="${ name }"></c:out><br> <!-- 입력한 값이 그대로 출력 -->
+					<c:out value="${ age }"></c:out><br> 
+					${ motto }<br> 
+					<c:out value="${ motto }" escapeXml="false"></c:out><br> 
+				</div>
+			</div>
+			<hr class="featurette-divider">
+			<!-- /END THE FEATURETTES -->
+		</div>
+		<!-- /.container -->
+		<!-- FOOTER -->
+		<footer class="container">
+			<jsp:include page="../fragments/footer.jsp"></jsp:include>
+		</footer>
+	</main>
+</body>
+</html>
