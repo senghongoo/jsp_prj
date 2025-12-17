@@ -127,6 +127,7 @@ public class BoardDAO {
 		//7. 연결 끊기
 			dbCon.dbClose(rs, pstmt, con);
 		}//end finally
+		
 		return list;
 	}//selectRangeBoard
 	
